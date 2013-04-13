@@ -1,14 +1,16 @@
 <?php
-/**
- * Created as Stick.php.
- * Developer: Hamza Waqas
- * Date:      2/4/13
- * Time:      4:20 PM
- */
 
+/**
+ *
+ *  Stick Object class to make CRUD operations on table.
+ *
+ * @author      Hamza Waqas
+ * @since       1st Feb, 2013
+ * @version     v1.0
+ */
 class Stick {
 
-    private $_table = "Hamza";
+    private $_table = "table_name";
 
     private $_data = array();
 
