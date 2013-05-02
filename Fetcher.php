@@ -1,9 +1,11 @@
 <?php
+namespace StickORM;
+
 /**
- * Created as Fetcher.php.
- * Developer: Hamza Waqas
- * Date:      2/4/13
- * Time:      7:38 PM
+ * Class Fetcher
+ * @package StickORM
+ * @author  Hamza Waqas
+ * @version v1.0
  */
 interface Fetcher
 {
