@@ -66,8 +66,6 @@ class Database implements Transactional, DataSource, Fetcher, Modifiable {
 
     public function get($object, array $criteria = array(), $order = null, $limit = null, $offset = 0)
     {
-
-
         $select = $this->_getDb()->select()->from($object);
         foreach ($this->_getWhere($criteria) as $where => $value) {
             $select->where($where, $value);
@@ -82,7 +80,6 @@ class Database implements Transactional, DataSource, Fetcher, Modifiable {
         if ($limit != null) {
             $select->limit($limit);
         }
-
 
         $stmt = $this->_getDb()->query($select);
         $stmt->execute();
@@ -171,7 +168,6 @@ class Database implements Transactional, DataSource, Fetcher, Modifiable {
 
     public function scanAndGet($object,$id) {
         $primaryKeyColumn = $this->_getPrimaryKeyColumn($object);
-
         return static::get($object, array("{$primaryKeyColumn} " => $id));
     }
 }

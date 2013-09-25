@@ -1,22 +1,32 @@
 <?php
-/**
- * Created as StickBuilder.php.
- * Developer: Hamza Waqas
- * Date:      2/6/13
- * Time:      4:03 PM
- */
 
+namespace StickORM;
 
 /**
- *  Helps to create a new Query.
+ * Class StickBuilder
+ * @package StickORM
+ * @author  Hamza Waqas
+ * @version v1.0
  */
 class StickBuilder {
 
+    /**
+     *  holds db instance.
+     * @var null
+     */
     private $_db = null;
 
+    /**
+     *  Holds data source
+     * @var null
+     */
     private static $_dataSource = null;
 
-
+    /**
+     * Implements __construct()
+     *
+     *  Fills $db class property.
+     */
     public function __construct() {
         $this->_db = StickConfig::getInstance()->datasource;
         static::$_dataSource = $this->_db->getAbstract();

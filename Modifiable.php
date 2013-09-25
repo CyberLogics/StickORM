@@ -1,14 +1,37 @@
 <?php
+
+namespace StickORM;
+
 /**
- * Created as Modifiable.php.
- * Developer: Hamza Waqas
- * Date:      2/5/13
- * Time:      2:11 PM
+ * Class Modifiable
+ * @package StickORM
+ * @author  Hamza Waqas
+ * @version v1.0
  */
 interface Modifiable {
 
+    /**
+     * Add
+     * @param $object
+     * @param array $data
+     * @return mixed
+     */
     public function add($object, array &$data);
+
+    /**
+     *  Updates a record
+     * @param $object
+     * @param array $data
+     * @return mixed
+     */
     public function update($object, array &$data);
+
+    /**
+     *  Delete a record.
+     * @param $object
+     * @param array $data
+     * @return mixed
+     */
     public function remove($object, array $data);
 
 }
